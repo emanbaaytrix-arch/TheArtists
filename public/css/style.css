@@ -687,4 +687,34 @@ img, svg, video, canvas { max-width: 100%; height: auto; }
   .rv, .svc, .work, .btn, .ico, .step, .founder-card { transition: none; }
   .marq-track { flex-wrap: wrap; width: auto; }
   .founder-card:hover { transform: translateY(-4px) !important; }
+}/* ===== LOGO SIZING ===== */
+.nav-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-logo {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Agar brand ke andar logo ke saath text hai */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
 }
