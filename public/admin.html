@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,7 +14,7 @@
   .login { display: grid; gap: 12px; max-width: 380px; background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
   .login label { font-weight: 600; font-size: 0.95rem; }
   .login input { width: 100%; background: var(--bg); border: 2px solid var(--line); border-radius: 12px; padding: 11px 14px; }
-  .login input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 4px rgba(34, 229, 139, 0.12); }
+  .login input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 4px rgba(0, 200, 120, 0.15); }
   .toolbar { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
   .row { border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin-bottom: 12px; display: grid; gap: 6px; background: var(--panel); }
   .row b { font-family: var(--display); font-weight: 800; }
@@ -135,142 +134,4 @@
 })();
 </script>
 </body>
-=======
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>Admin — The Artists</title>
-<link rel="stylesheet" href="css/style.css">
-<style>
-  body { padding: 40px max(16px, 4vw); }
-  .admin-wrap { max-width: 880px; margin: 0 auto; }
-  .admin-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
-  .admin-head h1 { font-family: var(--display); font-weight: 800; font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0; }
-  .login { display: grid; gap: 12px; max-width: 380px; background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
-  .login label { font-weight: 600; font-size: 0.95rem; }
-  .login input { width: 100%; background: var(--bg); border: 2px solid var(--line); border-radius: 12px; padding: 11px 14px; }
-  .login input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 4px rgba(34, 229, 139, 0.12); }
-  .toolbar { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
-  .row { border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin-bottom: 12px; display: grid; gap: 6px; background: var(--panel); }
-  .row b { font-family: var(--display); font-weight: 800; }
-  .row .meta { color: var(--muted); font-size: 0.9rem; }
-  .empty { padding: 32px; text-align: center; color: var(--muted); border: 2px dashed var(--line2); border-radius: 16px; }
-</style>
-</head>
-<body>
-<div class="admin-wrap">
-  <div class="admin-head">
-    <h1>Booking inbox</h1>
-    <a class="btn sm" href="/">← Back to site</a>
-  </div>
-
-  <div id="login" class="login" hidden>
-    <label for="key">Enter admin key to continue</label>
-    <input id="key" type="password" autocomplete="current-password" placeholder="Admin key">
-    <button class="btn primary" type="button" id="enter">Unlock</button>
-    <div id="login-msg" class="hint"></div>
-  </div>
-
-  <div id="app" hidden>
-    <div class="toolbar">
-      <button class="btn sm" type="button" id="refresh">Refresh</button>
-      <button class="btn sm" type="button" id="signout">Sign out</button>
-      <span id="count" class="hint" style="margin:0 0 0 auto"></span>
-    </div>
-    <div id="list"></div>
-  </div>
-</div>
-
-<script>
-(function () {
-  var STORE = 'ta_admin_key';
-  var keyInput = document.getElementById('key');
-  var login = document.getElementById('login');
-  var app = document.getElementById('app');
-  var list = document.getElementById('list');
-  var count = document.getElementById('count');
-  var loginMsg = document.getElementById('login-msg');
-
-  function getKey() { try { return localStorage.getItem(STORE) || ''; } catch (e) { return ''; } }
-  function setKey(k) { try { localStorage.setItem(STORE, k); } catch (e) {} }
-  function clearKey() { try { localStorage.removeItem(STORE); } catch (e) {} }
-
-  function esc(s) {
-    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-    });
-  }
-
-  function load(key) {
-    return fetch('/api/bookings', { headers: { 'x-admin-key': key } })
-      .then(function (r) {
-        if (r.status === 401) throw new Error('unauthorized');
-        return r.json();
-      });
-  }
-
-  function render(bookings) {
-    count.textContent = bookings.length + ' request' + (bookings.length === 1 ? '' : 's');
-    if (!bookings.length) {
-      list.innerHTML = '<div class="empty">No bookings yet. When visitors submit the form, they appear here.</div>';
-      return;
-    }
-    list.innerHTML = bookings.map(function (b) {
-      return '<div class="row">' +
-        '<b>' + esc(b.name) + ' — ' + esc(b.service) + '</b>' +
-        '<span class="meta">' + esc(b.type) + ' · ' + esc(b.when) + '</span>' +
-        '<span>' + esc(b.email) + (b.phone ? ' · ' + esc(b.phone) : '') + '</span>' +
-        (b.budget ? '<span class="meta">Budget: ' + esc(b.budget) + '</span>' : '') +
-        (b.notes ? '<span>' + esc(b.notes) + '</span>' : '') +
-        '<span class="meta">' + esc(new Date(b.createdAt).toLocaleString()) + ' · id ' + esc(b.id) + '</span>' +
-        '</div>';
-    }).join('');
-  }
-
-  function show(key) {
-    loginMsg.textContent = '';
-    load(key).then(function (data) {
-      if (!data.ok) throw new Error('bad');
-      login.hidden = true;
-      app.hidden = false;
-      setKey(key);
-      render(data.bookings || []);
-    }).catch(function (err) {
-      app.hidden = true;
-      login.hidden = false;
-      if (err.message === 'unauthorized') {
-        loginMsg.textContent = 'Wrong key. Try again.';
-        clearKey();
-      } else {
-        loginMsg.textContent = 'Could not load bookings.';
-      }
-    });
-  }
-
-  document.getElementById('enter').addEventListener('click', function () {
-    var k = keyInput.value.trim();
-    if (!k) { loginMsg.textContent = 'Enter the admin key.'; return; }
-    show(k);
-  });
-  keyInput.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') document.getElementById('enter').click();
-  });
-  document.getElementById('refresh').addEventListener('click', function () {
-    var k = getKey(); if (k) show(k);
-  });
-  document.getElementById('signout').addEventListener('click', function () {
-    clearKey(); app.hidden = true; login.hidden = false;
-    keyInput.value = ''; loginMsg.textContent = '';
-  });
-
-  var stored = getKey();
-  if (stored) show(stored);
-  else login.hidden = false;
-})();
-</script>
-</body>
->>>>>>> 4c1e8a0b88cd7ea8aeb6d3e6f66f45ff6da1d91a
 </html>

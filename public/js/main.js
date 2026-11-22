@@ -3,8 +3,8 @@
   document.documentElement.classList.add('js');
 
   var CFG = {
-    email: 'theartists.pk@gmail.com',
-    whatsapp: '+92 315 7540129',
+    email: 'theartists.log@gmail.com',
+    whatsapp: '+923157540129',
     hours: 'Mon to Sat, 10:00 to 18:00 (PKT)',
     tz: 'PKT',
     slots: ['10:00', '11:00', '12:00', '14:00', '15:00', '16:00', '17:00']
@@ -19,109 +19,87 @@
     'plus': '<svg viewBox="0 0 48 48"><path d="M24 10v28M10 24h28"/></svg>'
   };
 
- var SERVICES = [
-  {
-    id: 'video-editing', name: 'Video Editing', c: 'green', kind: 'video',
-    tags: ['YouTube', 'Reels', 'Brands'],
-    short: 'Story-first edits, reels and brand videos that hold attention.',
-    long: 'Raw footage in, a finished film out. We shape the story, tighten the pacing, add captions and clean up the sound so viewers stay to the end.',
-    gets: ['Story structure and pacing', 'Cuts, transitions and b-roll', 'Captions, color and sound cleanup', 'Export for YouTube, reels and broadcast'],
-    fmt: 'Formats: 16:9 and 9:16, up to 4K',
-    works: [
-      ['Travel vlog, 8 minutes', 'Vlog', '8:24', null, 'https://www.youtube.com/watch?v=aqz-KE-bpKQ'],
-      ['Podcast highlights', 'Podcast', '12:05', null, 'https://www.youtube.com/watch?v=jNQXAC9IVRw'],
-      ['Brand story film', 'Brand', '1:30', 'images/video-editing/brand.jpg', null],
-      ['Reels pack for a cafe', 'Reels', '0:15', 'images/video-editing/reels.jpg', null],
-      ['Event recap', 'Event', '3:45', 'images/video-editing/event.jpg', null],
-      ['Product launch video', 'Launch', '2:00', 'images/video-editing/launch.jpg', null]
-    ]
-  },
-  {
-    id: 'graphic-design', name: 'Graphic Designing', c: 'magenta', kind: 'design',
-    tags: ['Logos', 'Branding', 'Social posts'],
-    short: 'Logos, brand identities and social graphics that look sharp everywhere.',
-    long: 'We design the visual side of your brand: logos, color and type, social posts, posters and print, delivered as clean files you can use right away.',
-    gets: ['Logo and brand identity', 'Social media posts and carousels', 'Posters, flyers and print', 'Source files and brand guidelines'],
-    fmt: 'Formats: PNG, SVG, PDF and source files',
-    works: [
-      ['Cafe brand identity', 'Branding', 'Logo + palette', 'images/graphic-design/cafe-brand.jpg', null],
-      ['Gym logo set', 'Logo', 'SVG', 'images/graphic-design/gym-logo.jpg', null],
-      ['Event poster', 'Poster', 'A3', 'images/graphic-design/event-poster.jpg', null],
-      ['Social post pack', 'Social', '12 posts', 'images/graphic-design/social-pack.jpg', null],
-      ['Packaging label', 'Packaging', 'Print-ready', 'images/graphic-design/packaging.jpg', null],
-      ['Business card set', 'Print', 'Front + back', 'images/graphic-design/business-card.jpg', null]
-    ]
-  },
-  {
-    id: 'web-development', name: 'Web Development', c: 'sky', kind: 'web',
-    tags: ['Business sites', 'Stores', 'Web apps'],
-    short: 'Fast, responsive websites and web apps that turn visitors into customers.',
-    long: 'We design and build websites from landing pages to online stores, made to load fast and work on every screen size.',
-    gets: ['Responsive design for phone and desktop', 'Landing pages and business sites', 'Online stores and booking systems', 'Hosting setup and handover'],
-    fmt: 'Stack: HTML, CSS, JavaScript, React, Node',
-    works: [
-      ['Restaurant website', 'Business', '5 pages', 'images/web-development/restaurant.jpg', null],
-      ['Online clothing store', 'Store', 'E-commerce', 'images/web-development/clothing-store.jpg', null],
-      ['Agency landing page', 'Landing', '1 page', 'images/web-development/agency.jpg', null],
-      ['Clinic booking site', 'Booking', '8 pages', 'images/web-development/clinic.jpg', null],
-      ['Portfolio website', 'Portfolio', '4 pages', 'images/web-development/portfolio.jpg', null],
-      ['Sales dashboard', 'Web app', 'Admin', 'images/web-development/dashboard.jpg', null]
-    ]
-  },
-  {
-    id: 'content-writing', name: 'Content Writing', c: 'yellow', kind: 'write',
-    tags: ['Blogs', 'Scripts', 'Captions'],
-    short: 'Blogs, website copy and video scripts written to be read and remembered.',
-    long: 'Words that fit your brand. We write blog posts, website copy, video scripts and social captions that are clear and easy to act on.',
-    gets: ['Blog posts and articles', 'Website and product copy', 'Video and reel scripts', 'Social captions and email copy'],
-    fmt: 'Delivery: Google Docs or Word files',
-    works: [
-      ['Tips for small business growth', 'Blog', '1,200 words', 'images/content-writing/blog.jpg', null],
-      ['Homepage copy for a bakery', 'Web copy', '450 words', 'images/content-writing/homepage.jpg', null],
-      ['YouTube explainer script', 'Script', '900 words', 'images/content-writing/script.jpg', null],
-      ['30 days of captions', 'Social', '30 posts', 'images/content-writing/captions.jpg', null],
-      ['Product descriptions', 'Product', '20 items', 'images/content-writing/product.jpg', null],
-      ['Welcome email series', 'Email', '5 emails', 'images/content-writing/email.jpg', null]
-    ]
-  },
-  {
-    id: 'app-development', name: 'Application Development', c: 'violet', kind: 'app',
-    tags: ['Android', 'iOS', 'Desktop'],
-    short: 'Mobile and desktop apps built from first sketch to launch.',
-    long: 'From a first sketch to a published app. We plan the screens, build the app and help you launch it on the stores.',
-    gets: ['App planning and UI design', 'Android and iOS apps', 'Backend and database setup', 'Testing and store launch'],
-    fmt: 'Stack: Flutter, React Native, Firebase',
-    works: [
-      ['Food delivery app', 'Mobile', 'iOS + Android', 'images/app-development/food-app.jpg', null],
-      ['Fitness tracker', 'Mobile', 'Android', 'images/app-development/fitness.jpg', null],
-      ['Salon booking app', 'Mobile', 'iOS + Android', 'images/app-development/salon.jpg', null],
-      ['Inventory manager', 'Desktop', 'Windows', 'images/app-development/inventory.jpg', null],
-      ['School portal', 'Web + app', 'Cross-platform', 'images/app-development/school.jpg', null],
-      ['Expense tracker', 'Mobile', 'Android', 'images/app-development/expense.jpg', null]
-    ]
-  }
-];
   var SERVICES = [
-    { id: 'video-editing', name: 'Video Editing', c: 'green', kind: 'video', tags: ['YouTube', 'Reels', 'Brands'], short: 'Story-first edits, reels and brand videos that hold attention.',
+    {
+      id: 'video-editing', name: 'Video Editing', c: 'green', kind: 'video',
+      tags: ['YouTube', 'Reels', 'Brands'],
+      short: 'Story-first edits, reels and brand videos that hold attention.',
       long: 'Raw footage in, a finished film out. We shape the story, tighten the pacing, add captions and clean up the sound so viewers stay to the end.',
-      gets: ['Story structure and pacing', 'Cuts, transitions and b-roll', 'Captions, color and sound cleanup', 'Export for YouTube, reels and broadcast'], fmt: 'Formats: 16:9 and 9:16, up to 4K',
-      works: [['Travel vlog, 8 minutes', 'Vlog', '8:24'], ['Podcast highlights', 'Podcast', '12:05'], ['Brand story film', 'Brand', '1:30'], ['Reels pack for a cafe', 'Reels', '0:15'], ['Event recap', 'Event', '3:45'], ['Product launch video', 'Launch', '2:00']] },
-    { id: 'graphic-design', name: 'Graphic Designing', c: 'magenta', kind: 'design', tags: ['Logos', 'Branding', 'Social posts'], short: 'Logos, brand identities and social graphics that look sharp everywhere.',
+      gets: ['Story structure and pacing', 'Cuts, transitions and b-roll', 'Captions, color and sound cleanup', 'Export for YouTube, reels and broadcast'],
+      fmt: 'Formats: 16:9 and 9:16, up to 4K',
+      works: [
+        ['Travel vlog, 8 minutes', 'Vlog', '8:24', null, 'https://www.youtube.com/watch?v=aqz-KE-bpKQ'],
+        ['Podcast highlights', 'Podcast', '12:05', null, 'https://www.youtube.com/watch?v=jNQXAC9IVRw'],
+        ['Brand story film', 'Brand', '1:30', 'images/video-editing/brand.jpg', null],
+        ['Reels pack for a cafe', 'Reels', '0:15', 'images/video-editing/reels.jpg', null],
+        ['Event recap', 'Event', '3:45', 'images/video-editing/event.jpg', null],
+        ['Product launch video', 'Launch', '2:00', 'images/video-editing/launch.jpg', null]
+      ]
+    },
+    {
+      id: 'graphic-design', name: 'Graphic Designing', c: 'magenta', kind: 'design',
+      tags: ['Logos', 'Branding', 'Social posts'],
+      short: 'Logos, brand identities and social graphics that look sharp everywhere.',
       long: 'We design the visual side of your brand: logos, color and type, social posts, posters and print, delivered as clean files you can use right away.',
-      gets: ['Logo and brand identity', 'Social media posts and carousels', 'Posters, flyers and print', 'Source files and brand guidelines'], fmt: 'Formats: PNG, SVG, PDF and source files',
-      works: [['Cafe brand identity', 'Branding', 'Logo + palette'], ['Gym logo set', 'Logo', 'SVG'], ['Event poster', 'Poster', 'A3'], ['Social post pack', 'Social', '12 posts'], ['Packaging label', 'Packaging', 'Print-ready'], ['Business card set', 'Print', 'Front + back']] },
-    { id: 'web-development', name: 'Web Development', c: 'sky', kind: 'web', tags: ['Business sites', 'Stores', 'Web apps'], short: 'Fast, responsive websites and web apps that turn visitors into customers.',
+      gets: ['Logo and brand identity', 'Social media posts and carousels', 'Posters, flyers and print', 'Source files and brand guidelines'],
+      fmt: 'Formats: PNG, SVG, PDF and source files',
+      works: [
+        ['Cafe brand identity', 'Branding', 'Logo + palette', 'images/graphic-design/cafe-brand.jpg', null],
+        ['Gym logo set', 'Logo', 'SVG', 'images/graphic-design/gym-logo.jpg', null],
+        ['Event poster', 'Poster', 'A3', 'images/graphic-design/event-poster.jpg', null],
+        ['Social post pack', 'Social', '12 posts', 'images/graphic-design/social-pack.jpg', null],
+        ['Packaging label', 'Packaging', 'Print-ready', 'images/graphic-design/packaging.jpg', null],
+        ['Business card set', 'Print', 'Front + back', 'images/graphic-design/business-card.jpg', null]
+      ]
+    },
+    {
+      id: 'web-development', name: 'Web Development', c: 'sky', kind: 'web',
+      tags: ['Business sites', 'Stores', 'Web apps'],
+      short: 'Fast, responsive websites and web apps that turn visitors into customers.',
       long: 'We design and build websites from landing pages to online stores, made to load fast and work on every screen size.',
-      gets: ['Responsive design for phone and desktop', 'Landing pages and business sites', 'Online stores and booking systems', 'Hosting setup and handover'], fmt: 'Stack: HTML, CSS, JavaScript, React, Node',
-      works: [['Restaurant website', 'Business', '5 pages'], ['Online clothing store', 'Store', 'E-commerce'], ['Agency landing page', 'Landing', '1 page'], ['Clinic booking site', 'Booking', '8 pages'], ['Portfolio website', 'Portfolio', '4 pages'], ['Sales dashboard', 'Web app', 'Admin']] },
-    { id: 'content-writing', name: 'Content Writing', c: 'yellow', kind: 'write', tags: ['Blogs', 'Scripts', 'Captions'], short: 'Blogs, website copy and video scripts written to be read and remembered.',
+      gets: ['Responsive design for phone and desktop', 'Landing pages and business sites', 'Online stores and booking systems', 'Hosting setup and handover'],
+      fmt: 'Stack: HTML, CSS, JavaScript, React, Node',
+      works: [
+        ['Restaurant website', 'Business', '5 pages', 'images/web-development/restaurant.jpg', null],
+        ['Online clothing store', 'Store', 'E-commerce', 'images/web-development/clothing-store.jpg', null],
+        ['Agency landing page', 'Landing', '1 page', 'images/web-development/agency.jpg', null],
+        ['Clinic booking site', 'Booking', '8 pages', 'images/web-development/clinic.jpg', null],
+        ['Portfolio website', 'Portfolio', '4 pages', 'images/web-development/portfolio.jpg', null],
+        ['Sales dashboard', 'Web app', 'Admin', 'images/web-development/dashboard.jpg', null]
+      ]
+    },
+    {
+      id: 'content-writing', name: 'Content Writing', c: 'yellow', kind: 'write',
+      tags: ['Blogs', 'Scripts', 'Captions'],
+      short: 'Blogs, website copy and video scripts written to be read and remembered.',
       long: 'Words that fit your brand. We write blog posts, website copy, video scripts and social captions that are clear and easy to act on.',
-      gets: ['Blog posts and articles', 'Website and product copy', 'Video and reel scripts', 'Social captions and email copy'], fmt: 'Delivery: Google Docs or Word files',
-      works: [['Tips for small business growth', 'Blog', '1,200 words'], ['Homepage copy for a bakery', 'Web copy', '450 words'], ['YouTube explainer script', 'Script', '900 words'], ['30 days of captions', 'Social', '30 posts'], ['Product descriptions', 'Product', '20 items'], ['Welcome email series', 'Email', '5 emails']] },
-    { id: 'app-development', name: 'Application Development', c: 'violet', kind: 'app', tags: ['Android', 'iOS', 'Desktop'], short: 'Mobile and desktop apps built from first sketch to launch.',
+      gets: ['Blog posts and articles', 'Website and product copy', 'Video and reel scripts', 'Social captions and email copy'],
+      fmt: 'Delivery: Google Docs or Word files',
+      works: [
+        ['Tips for small business growth', 'Blog', '1,200 words', 'images/content-writing/blog.jpg', null],
+        ['Homepage copy for a bakery', 'Web copy', '450 words', 'images/content-writing/homepage.jpg', null],
+        ['YouTube explainer script', 'Script', '900 words', 'images/content-writing/script.jpg', null],
+        ['30 days of captions', 'Social', '30 posts', 'images/content-writing/captions.jpg', null],
+        ['Product descriptions', 'Product', '20 items', 'images/content-writing/product.jpg', null],
+        ['Welcome email series', 'Email', '5 emails', 'images/content-writing/email.jpg', null]
+      ]
+    },
+    {
+      id: 'app-development', name: 'Application Development', c: 'violet', kind: 'app',
+      tags: ['Android', 'iOS', 'Desktop'],
+      short: 'Mobile and desktop apps built from first sketch to launch.',
       long: 'From a first sketch to a published app. We plan the screens, build the app and help you launch it on the stores.',
-      gets: ['App planning and UI design', 'Android and iOS apps', 'Backend and database setup', 'Testing and store launch'], fmt: 'Stack: Flutter, React Native, Firebase',
-      works: [['Food delivery app', 'Mobile', 'iOS + Android'], ['Fitness tracker', 'Mobile', 'Android'], ['Salon booking app', 'Mobile', 'iOS + Android'], ['Inventory manager', 'Desktop', 'Windows'], ['School portal', 'Web + app', 'Cross-platform'], ['Expense tracker', 'Mobile', 'Android']] }
+      gets: ['App planning and UI design', 'Android and iOS apps', 'Backend and database setup', 'Testing and store launch'],
+      fmt: 'Stack: Flutter, React Native, Firebase',
+      works: [
+        ['Food delivery app', 'Mobile', 'iOS + Android', 'images/app-development/food-app.jpg', null],
+        ['Fitness tracker', 'Mobile', 'Android', 'images/app-development/fitness.jpg', null],
+        ['Salon booking app', 'Mobile', 'iOS + Android', 'images/app-development/salon.jpg', null],
+        ['Inventory manager', 'Desktop', 'Windows', 'images/app-development/inventory.jpg', null],
+        ['School portal', 'Web + app', 'Cross-platform', 'images/app-development/school.jpg', null],
+        ['Expense tracker', 'Mobile', 'Android', 'images/app-development/expense.jpg', null]
+      ]
+    }
   ];
   var BS = ['green', 'magenta', 'sky', 'yellow', 'violet', 'orange', 'teal', 'lime'];
 
@@ -167,7 +145,6 @@
       if (e.isIntersecting) {
         e.target.classList.add('in');
         io.unobserve(e.target);
-        // Trigger counter if inside
         var counters = $$('[data-count]:not([data-counted])', e.target);
         if (counters.length === 0 && e.target.matches('[data-count]:not([data-counted])')) counters = [e.target];
         counters.forEach(animateCounter);
@@ -219,17 +196,33 @@
   /* ---------- Service Page Rendering ---------- */
   function thumb(s, w, i) {
     var b = BS[(i + 2) % BS.length], k = s.kind, inner = '';
-    if (k === 'video') inner = '<span class="pl"></span>';
-    else if (k === 'design') inner = '<i class="sh s1"></i><i class="sh s2"></i><i class="sh s3"></i>';
-    else if (k === 'web') inner = '<div class="bw" style="--b:var(--' + b + ')"><div class="bw-bar"><i></i><i></i><i></i><b></b></div><div class="bw-hero"></div><div class="bw-row"><i></i><i></i><i></i></div></div>';
-    else if (k === 'write') inner = '<div class="wr"><b class="tt"></b><i class="ln"></i><i class="ln"></i><i class="ln"></i><i class="ln"></i><i class="ln"></i></div>';
-    else inner = '<div class="ap"><div class="scr"><b class="hd"></b><i class="rw"></i><i class="rw"></i><i class="rw"></i></div></div>';
-    return '<div class="wthumb k-' + k + ' v' + (i % 3) + '" style="--g:linear-gradient(135deg,var(--a),var(--' + b + '))">' + inner +
+    var imgUrl = w[3] || null;
+    var bgStyle = imgUrl
+      ? '--g:linear-gradient(135deg,var(--a),var(--' + b + '));background-image:linear-gradient(180deg,rgba(2,11,8,0.35),rgba(2,11,8,0.65)),url(' + esc(imgUrl) + ');background-size:cover;background-position:center;'
+      : '--g:linear-gradient(135deg,var(--a),var(--' + b + '))';
+
+    if (!imgUrl) {
+      if (k === 'video') inner = '<span class="pl"></span>';
+      else if (k === 'design') inner = '<i class="sh s1"></i><i class="sh s2"></i><i class="sh s3"></i>';
+      else if (k === 'web') inner = '<div class="bw" style="--b:var(--' + b + ')"><div class="bw-bar"><i></i><i></i><i></i><b></b></div><div class="bw-hero"></div><div class="bw-row"><i></i><i></i><i></i></div></div>';
+      else if (k === 'write') inner = '<div class="wr"><b class="tt"></b><i class="ln"></i><i class="ln"></i><i class="ln"></i><i class="ln"></i><i class="ln"></i></div>';
+      else inner = '<div class="ap"><div class="scr"><b class="hd"></b><i class="rw"></i><i class="rw"></i><i class="rw"></i></div></div>';
+    }
+    return '<div class="wthumb k-' + k + ' v' + (i % 3) + '" style="' + bgStyle + '">' + inner +
       '<span class="chip s">Sample</span><span class="chip k">' + esc(w[1]) + '</span><span class="chip d">' + esc(w[2]) + '</span></div>';
   }
   function workCard(s, w, i) {
+    var videoUrl = w[4] || null;
+    var cta;
+    if (videoUrl) {
+      cta = '<a class="btn sm" href="' + esc(videoUrl) + '" target="_blank" rel="noopener" style="background:var(--a);border-color:var(--a);color:var(--ink)">Watch video →</a>';
+    } else if (w[3]) {
+      cta = '<span class="btn sm off">View project</span>';
+    } else {
+      cta = '<span class="btn sm off">Link coming soon</span>';
+    }
     return '<article class="work rv" style="--d:' + ((i % 4) * 70) + 'ms">' + thumb(s, w, i) +
-      '<div class="wbody"><h3>' + esc(w[0]) + '</h3><span class="btn sm off" title="A link to the project goes here">Link coming soon</span></div></article>';
+      '<div class="wbody"><h3>' + esc(w[0]) + '</h3>' + cta + '</div></article>';
   }
   function renderService(s) {
     var i = SERVICES.indexOf(s), n = SERVICES.length;
@@ -375,7 +368,6 @@
         });
     });
 
-    // Expose setService for external buttons
     window.__setBookingService = setService;
   }
 
