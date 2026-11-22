@@ -2,12 +2,12 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>The Artists — Creative & Tech Agency</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#020B08">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Figtree:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -22,34 +22,35 @@
   <i class="sm sm4"></i>
   <i class="sm sm5"></i>
   <i class="sm sm6"></i>
-  <i class="sm sm7"></i>
-  <i class="sm sm8"></i>
 </div>
 
 <div class="wrap">
   <header class="top">
     <a class="brand" href="#home">
-      <span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>The Artists
+      <div class="brand-title">
+        <b>The Artists</b>
+        <small>Creative &amp; Tech Agency</small>
+      </div>
+      <!-- Agar aapke paas logo image hai toh src lagayein, warna yeh text/icon show hoga -->
+      <span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
     </a>
     <nav aria-label="Main">
       <a class="l" href="#services">Services</a>
-      <a class="l hide-s" href="#founders">Team</a>
+      <a class="l hide-s" href="#founders">Founders</a>
       <a class="l hide-s" href="#process">Process</a>
+      <a class="l hide-s" href="#reviews">Reviews</a>
       <a class="btn primary sm" href="#book" data-book="">Book a call</a>
     </nav>
   </header>
 
   <main>
     <div class="view" id="v-home">
+      
+      <!-- HERO SECTION (2 Columns: Text Left, Terminal Right) -->
       <div class="hero3">
-        <figure class="char l" id="fig-uzair" style="--a:var(--sky)">
-          <canvas id="cv-uzair" role="img" aria-label="Animated 3D character of Uzair Ehsan, Co-Founder"></canvas>
-          <div class="avatar-fb" aria-hidden="true">UE</div>
-          <figcaption class="plate"><b>Uzair Ehsan</b><span class="mono">Co-Founder</span></figcaption>
-        </figure>
-
         <div class="hero-copy">
-          <div class="eyebrow mono"><i></i>Creative &amp; tech agency</div>
+          <!-- Logo for hero (optional) -->
+          <div class="eyebrow mono"><i></i>Available for new projects · 2026</div>
           <h1>Ideas made<br>
             <span class="rot" aria-label="watchable, visible, clickable, readable, usable">
               <ul aria-hidden="true">
@@ -62,22 +63,49 @@
               </ul>
             </span>
           </h1>
-          <p class="lead">The Artists is an agency for video editing, graphic design, web development, content writing and app development. One team, one brief, everything your brand needs.</p>
+          <p class="lead">The Artists is a premium agency for video editing, graphic design, web development, content writing and app development. One team, one brief, everything your brand needs.</p>
           <div class="cta-row">
             <a class="btn primary" href="#book" data-book="">Book a call</a>
             <a class="btn" href="#services">Explore services</a>
           </div>
+          
+          <div class="hero-stats">
+            <div><b>50+</b><span>Projects</span></div>
+            <div><b>20+</b><span>Clients</span></div>
+            <div><b>5</b><span>Services</span></div>
+            <div><b>24h</b><span>Reply Time</span></div>
+          </div>
         </div>
 
-        <figure class="char r" id="fig-talha" style="--a:var(--magenta)">
-          <canvas id="cv-talha" role="img" aria-label="Animated 3D character of Talha Rauf, Founder"></canvas>
-          <div class="avatar-fb" aria-hidden="true">TR</div>
-          <figcaption class="plate"><b>Talha Rauf</b><span class="mono">Founder</span></figcaption>
-        </figure>
+        <div class="hero-showcase">
+          <!-- Terminal Window -->
+          <div class="hs-terminal">
+            <div class="hs-bar">
+              <i></i><i></i><i></i>
+              <span>THE-ARTISTS ~ LIVE</span>
+            </div>
+            <div class="hs-body">
+              <div class="hs-line"><span class="hs-prompt">$</span> <span class="hs-cmd">the-artists new --project</span></div>
+              <div class="hs-out">-> brief received <span class="hs-ok">✓</span></div>
+              <div class="hs-line"><span class="hs-prompt">$</span> <span class="hs-cmd">team --assign</span></div>
+              <div class="hs-out"><span class="hs-ok">✓</span> 5 specialists matched</div>
+              <div class="hs-out"><span class="hs-ok">✓</span> first draft in 72h</div>
+              <div class="hs-line"><span class="hs-prompt">$</span> <span class="hs-cursor"></span></div>
+            </div>
+          </div>
+          
+          <!-- Small Stats Cards -->
+          <div class="hs-stats">
+            <div class="hs-stat"><b>4.9★</b><span>Rating</span></div>
+            <div class="hs-stat"><b>100%</b><span>On-time</span></div>
+            <div class="hs-stat"><b>24h</b><span>Reply</span></div>
+          </div>
+        </div>
       </div>
 
       <div class="marq" aria-hidden="true"><div class="marq-track" id="marq"></div></div>
 
+      <!-- SERVICES SECTION -->
       <section id="services" aria-labelledby="services-h">
         <div class="sec-head rv">
           <div class="eyebrow mono">What we do</div>
@@ -87,7 +115,7 @@
         <div class="svcs" id="svcs"></div>
       </section>
 
-      <!-- MINDS BEHIND THE AGENCY SECTION -->
+      <!-- MINDS BEHIND THE AGENCY (Founders) -->
       <section id="founders" aria-labelledby="founders-h">
         <div class="sec-head rv">
           <div class="eyebrow mono"><i></i>Minds behind the agency</div>
@@ -131,6 +159,7 @@
         </div>
       </section>
 
+      <!-- PROCESS SECTION -->
       <section id="process" aria-labelledby="process-h">
         <div class="sec-head rv">
           <div class="eyebrow mono">How a project runs</div>
@@ -144,6 +173,7 @@
         </div>
       </section>
 
+      <!-- BOOKING SECTION -->
       <section id="book" aria-labelledby="book-h">
         <div class="book">
           <div class="book-info rv">
@@ -168,14 +198,19 @@
 
   <footer>
     <div>
-      <a class="brand" href="#home"><span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>The Artists</a>
-      <p style="margin-top:10px">© 2026 The Artists</p>
+      <a class="brand" href="#home">
+        <div class="brand-title">
+          <b>The Artists</b>
+          <small>Creative &amp; Tech</small>
+        </div>
+        <span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      </a>
+      <p style="margin-top:12px">© 2026 The Artists</p>
     </div>
     <div class="flinks" id="flinks"></div>
   </footer>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="/js/main.js"></script>
 </body>
 </html>
