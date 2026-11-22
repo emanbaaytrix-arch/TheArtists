@@ -1,15 +1,15 @@
-<<<<<<< HEAD
 <!doctype html>
-<html lang="en">
+<html>
 <head>
 <meta charset=utf8>
 <meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>The Artists — Creative & Tech Agency</title>
-<meta name="description" content="Premium agency for video editing, graphic design, web development, content writing and app development.">
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
@@ -17,338 +17,67 @@
 <div class="progress" id="progress" aria-hidden="true"></div>
 
 <div class="smoke" aria-hidden="true">
-  <i class="sm sm1"></i><i class="sm sm2"></i><i class="sm sm3"></i>
-  <i class="sm sm4"></i><i class="sm sm5"></i><i class="sm sm6"></i>
-</div>
-
-<div class="wrap">
-  <header class=
-    <a class="brand" href="#home">
-      <span class="brand-title">
-        <b>The Artists</b>
-        <small>Creative &amp; Tech Agency</small>
-      </span>
-      <img src="the-artists-logo.png" alt="The Artists Logo" class="nav-logo">
-    </a>
-    <nav aria-label="Main">
-      <a class="l" href="#services">Services</a>
-      <a class="l hide-s" href="#founders">Founders</a>
-      <a class="l hide-s" href="#testimonials">Reviews</a>
-      <a class="l hide-s" href="#faq">FAQ</a>
-      <a class="btn primary sm" href="#book" data-book="">Book a call</a>
-    </nav>
-  </header>
-
-  <main>
-    <div class="view" id="v-home">
-
-      <!-- ============ HERO ============ -->
-      <div class="hero3">
-        <div class="hero-copy rv">
-          <img src="the-artists-logo.png" alt="The Artists" class="hero-logo">
-          <div class="eyebrow mono"><i></i>Available for new projects · 2026</div>
-          <h1>Ideas made<br>
-            <span class="rot" aria-label="watchable, visible, clickable, readable, usable">
-              <ul aria-hidden="true">
-                <li><span style="background:var(--emerald)">watchable.</span></li>
-                <li><span style="background:var(--magenta)">visible.</span></li>
-                <li><span style="background:var(--sky)">clickable.</span></li>
-                <li><span style="background:var(--yellow)">readable.</span></li>
-                <li><span style="background:var(--violet)">usable.</span></li>
-                <li><span style="background:var(--emerald)">watchable.</span></li>
-              </ul>
-            </span>
-          </h1>
-          <p class="lead">The Artists is a premium agency for video editing, graphic design, web development, content writing and app development. One team, one brief, everything your brand needs.</p>
-          <div class="cta-row">
-            <a class="btn primary" href="#book" data-book="">Book a call</a>
-            <a class="btn" href="#services">Explore services</a>
-          </div>
-          <div class="hero-stats">
-            <div><b data-count="50" data-suffix="+">0+</b><span>Projects</span></div>
-            <div><b data-count="20" data-suffix="+">0+</b><span>Clients</span></div>
-            <div><b data-count="5">0</b><span>Services</span></div>
-            <div><b data-count="24" data-suffix="h">0h</b><span>Reply time</span></div>
-          </div>
-        </div>
-
-        <!-- Tech showcase -->
-        <div class="hero-showcase rv" aria-hidden="true">
-          <div class="hs-terminal">
-            <div class="hs-bar">
-              <i></i><i></i><i></i>
-              <span class="mono">the-artists ~ live</span>
-            </div>
-            <div class="hs-body">
-              <div class="hs-line"><span class="hs-prompt">$</span> <span class="hs-cmd">the-artists new --project</span></div>
-              <div class="hs-out">→ brief received <span class="hs-ok">✓</span></div>
-              <div class="hs-line"><span class="hs-prompt">$</span> <span class="hs-cmd">team --assign</span></div>
-              <div class="hs-out"><span class="hs-ok">✓</span> 5 specialists matched</div>
-              <div class="hs-out"><span class="hs-ok">✓</span> first draft in 72h</div>
-              <div class="hs-line"><span class="hs-prompt">$</span> <span class="hs-cursor"></span></div>
-            </div>
-          </div>
-          <div class="hs-stats">
-            <div class="hs-stat"><b>4.9<span>★</span></b><span>Rating</span></div>
-            <div class="hs-stat"><b>100<span>%</span></b><span>On-time</span></div>
-            <div class="hs-stat"><b>24<span>h</span></b><span>Reply</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="marq" aria-hidden="true"><div class="marq-track" id="marq"></div></div>
-
-      <!-- Trust strip -->
-      <section class="trust-strip rv" aria-label="Trusted by">
-        <p class="mono">Trusted by teams at</p>
-        <div class="trust-logos">
-          <span>NEXUS</span><span>VERTEX</span><span>LUMEN</span>
-          <span>PULSE</span><span>ORBIT</span><span>FLOW</span>
-        </div>
-      </section>
-
-      <!-- SERVICES -->
-      <section id="services" aria-labelledby="services-h">
-        <div class="sec-head rv">
-          <div class="eyebrow mono">What we do</div>
-          <h2 id="services-h">Five services, each with its own portfolio</h2>
-          <p>Open a service to see sample projects, what is included and how we deliver.</p>
-        </div>
-        <div class="svcs" id="svcs"></div>
-      </section>
-
-      <!-- Stats band -->
-      <section class="stats-band rv" aria-label="Numbers">
-        <div class="stat-item"><b data-count="50" data-suffix="+">0+</b><span>Projects delivered</span></div>
-        <div class="stat-item"><b data-count="20" data-suffix="+">0+</b><span>Happy clients</span></div>
-        <div class="stat-item"><b data-count="100" data-suffix="%">0%</b><span>On-time delivery</span></div>
-        <div class="stat-item"><b data-count="12" data-suffix="+">0+</b><span>Industries served</span></div>
-      </section>
-
-      <!-- FOUNDERS -->
-      <section id="founders" aria-labelledby="founders-h">
-        <div class="sec-head rv">
-          <div class="eyebrow mono">The Team</div>
-          <h2 id="founders-h">The minds behind the agency</h2>
-          <p>Two founders, one vision — building brands that stand out and systems that work.</p>
-        </div>
-        <div class="founders-duo">
-          <article class="founder-card founder-l rv">
-            <div class="fc-media">
-              <img src="uzair-founder.png" alt="Uzair Ehsan, Founder" loading="lazy">
-            </div>
-            <div class="fc-info">
-              <div class="fc-head"><h3>Uzair Ehsan</h3><span class="mono fc-role">Founder</span></div>
-              <p>Driving the creative and technical vision behind our most complex digital products. Passionate about building things that work beautifully.</p>
-              <div class="fc-socials"><a href="#" target="_blank" rel="noopener">LinkedIn →</a></div>
-            </div>
-          </article>
-          <article class="founder-card founder-r rv" style="--d:120ms">
-            <div class="fc-media">
-              <img src="talha-founder.png" alt="Talha Rauf, Founder" loading="lazy">
-            </div>
-            <div class="fc-info">
-              <div class="fc-head"><h3>Talha Rauf</h3><span class="mono fc-role">Founder</span></div>
-              <p>Leading strategy, client success, and project delivery. Focused on turning raw ideas into scalable, market-ready brand experiences.</p>
-              <div class="fc-socials"><a href="#" target="_blank" rel="noopener">LinkedIn →</a></div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- PROCESS -->
-      <section id="process" aria-labelledby="process-h">
-        <div class="sec-head rv">
-          <div class="eyebrow mono">How a project runs</div>
-          <h2 id="process-h">From brief to final files</h2>
-        </div>
-        <div class="steps">
-          <div class="step rv" style="--c:var(--green);--d:0ms"><span class="n">1</span><h3>Brief</h3><p>Tell us what you need, who it is for and where it will be used.</p></div>
-          <div class="step rv" style="--c:var(--yellow);--d:80ms"><span class="n">2</span><h3>First draft</h3><p>We share a plan, a timeline and a first version to react to.</p></div>
-          <div class="step rv" style="--c:var(--sky);--d:160ms"><span class="n">3</span><h3>Revisions</h3><p>You send notes and we refine the work until it feels right.</p></div>
-          <div class="step rv" style="--c:var(--magenta);--d:240ms"><span class="n">4</span><h3>Delivery</h3><p>Final files, source files and a clear handover, ready to use.</p></div>
-        </div>
-      </section>
-
-      <!-- TESTIMONIALS -->
-      <section id="testimonials" aria-labelledby="testi-h">
-        <div class="sec-head rv">
-          <div class="eyebrow mono">Testimonials</div>
-          <h2 id="testi-h">What clients say</h2>
-          <p>Real words from real projects — no filler.</p>
-        </div>
-        <div class="testi-grid">
-          <blockquote class="testi rv">
-            <p>"The Artists delivered a brand video that stopped people mid-scroll. Clean, on-time, and way beyond what we expected."</p>
-            <footer><b>Sarah Khan</b><span>Marketing Director · Nexus</span></footer>
-          </blockquote>
-          <blockquote class="testi rv" style="--d:80ms">
-            <p>"Our new website loads fast, looks premium, and bookings doubled in the first month. Zero complaints."</p>
-            <footer><b>Ahmed Ali</b><span>Founder · Vertex Studio</span></footer>
-          </blockquote>
-          <blockquote class="testi rv" style="--d:160ms">
-            <p>"The brand identity they built is exactly what we needed — modern, versatile, and impossible to ignore."</p>
-            <footer><b>Fatima Sheikh</b><span>CEO · Lumen Co.</span></footer>
-          </blockquote>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section id="faq" aria-labelledby="faq-h">
-        <div class="sec-head rv">
-          <div class="eyebrow mono">FAQ</div>
-          <h2 id="faq-h">Questions, answered</h2>
-        </div>
-        <div class="faq-list">
-          <details class="faq-item rv"><summary>How long does a project take?</summary><p>Most projects complete in 3–14 days depending on scope. Larger builds get a clear timeline upfront before we start.</p></details>
-          <details class="faq-item rv" style="--d:40ms"><summary>What does a project cost?</summary><p>Pricing depends on scope. Small tasks start around a few hundred dollars, full builds are quoted after a short discovery call. No hidden fees.</p></details>
-          <details class="faq-item rv" style="--d:80ms"><summary>Do you offer revisions?</summary><p>Yes. Every project includes revision rounds. We keep refining until the work feels right for your brand.</p></details>
-          <details class="faq-item rv" style="--d:120ms"><summary>What files will I receive?</summary><p>You get final exports plus source files where applicable — so you own everything and can reuse it forever.</p></details>
-          <details class="faq-item rv" style="--d:160ms"><summary>Do you work with international clients?</summary><p>Yes, we work with clients across time zones. Calls are scheduled in your time zone and async updates keep everything moving.</p></details>
-          <details class="faq-item rv" style="--d:200ms"><summary>How do we start?</summary><p>Book a discovery call or send a brief through the form below. We reply within 24 hours with next steps.</p></details>
-        </div>
-      </section>
-
-      <!-- BOOKING -->
-      <section id="book" aria-labelledby="book-h">
-        <div class="book">
-          <div class="book-info rv">
-            <div class="eyebrow mono">Book</div>
-            <h2 id="book-h">Let's talk about your project</h2>
-            <p>Choose a service, pick a time for a call, or send a brief if you would rather write. Tell us what you are making and we will reply with next steps.</p>
-            <div class="ctc">
-              <div class="ctc-row"><span class="lbl mono">Email</span><code id="c-mail"></code><button class="btn sm" type="button" data-copy="c-mail">Copy</button></div>
-              <div class="ctc-row"><span class="lbl mono">WhatsApp</span><code id="c-wa"></code><button class="btn sm" type="button" data-copy="c-wa">Copy</button></div>
-              <div class="ctc-row"><span class="lbl mono">Hours</span><span id="c-hours"></span></div>
-            </div>
-            <div id="copy-status" class="hint" aria-live="polite"></div>
-          </div>
-          <div class="bk rv" id="bk"></div>
-        </div>
-      </section>
-    </div>
-
-    <div class="view" id="v-service" hidden></div>
-    <div class="view" id="v-inbox" hidden></div>
-  </main>
-
-  <footer>
-    <div class="f-brand">
-      <a class="brand" href="#home"><img src="the-artists-logo.png" alt="The Artists Logo" class="footer-logo"></a>
-      <p style="margin-top:16px">© 2026 The Artists. All rights reserved.</p>
-    </div>
-    <div class="flinks" id="flinks"></div>
-  </footer>
-</div>
-
-<script src="js/main.js"></script>
-</body>
-
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset=utf8>
-<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>The Artists — Creative & Tech Agency</title>
-<meta name="description" content="Premium agency for video editing, graphic design, web development, content writing and app development.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<div class="safe-top"></div>
-<div class="progress" id="progress" aria-hidden="true"></div>
-
-<div class="smoke" aria-hidden="true">
-  <i class="sm sm1"></i><i class="sm sm2"></i><i class="sm sm3"></i>
-  <i class="sm sm4"></i><i class="sm sm5"></i><i class="sm sm6"></i>
+  <i class="sm sm1"></i>
+  <i class="sm sm2"></i>
+  <i class="sm sm3"></i>
+  <i class="sm sm4"></i>
+  <i class="sm sm5"></i>
+  <i class="sm sm6"></i>
+  <i class="sm sm7"></i>
+  <i class="sm sm8"></i>
 </div>
 
 <div class="wrap">
   <header class="top">
     <a class="brand" href="#home">
-      <img src="the-artists-logo.png" alt="The Artists Logo" class="nav-logo">
+      <span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>The Artists
     </a>
     <nav aria-label="Main">
       <a class="l" href="#services">Services</a>
-      <a class="l hide-s" href="#founders">Founders</a>
-      <a class="l hide-s" href="#testimonials">Reviews</a>
-      <a class="l hide-s" href="#faq">FAQ</a>
+      <a class="l hide-s" href="#process">Process</a>
       <a class="btn primary sm" href="#book" data-book="">Book a call</a>
     </nav>
   </header>
 
   <main>
     <div class="view" id="v-home">
-
-      <!-- ============ HERO ============ -->
       <div class="hero3">
-        <div class="hero-copy rv">
-          <img src="the-artists-logo.png" alt="The Artists" class="hero-logo">
-          <div class="eyebrow mono"><i></i>Available for new projects · 2026</div>
+        <figure class="char l" id="fig-uzair" style="--a:var(--sky)">
+          <canvas id="cv-uzair" role="img" aria-label="Animated 3D character of Uzair Ehsan, Co-Founder"></canvas>
+          <div class="avatar-fb" aria-hidden="true">UE</div>
+          <figcaption class="plate"><b>Uzair Ehsan</b><span class="mono">Co-Founder</span></figcaption>
+        </figure>
+
+        <div class="hero-copy">
+          <div class="eyebrow mono"><i></i>Creative &amp; tech agency</div>
           <h1>Ideas made<br>
             <span class="rot" aria-label="watchable, visible, clickable, readable, usable">
               <ul aria-hidden="true">
-                <li><span style="background:var(--emerald)">watchable.</span></li>
+                <li><span style="background:var(--green)">watchable.</span></li>
                 <li><span style="background:var(--magenta)">visible.</span></li>
                 <li><span style="background:var(--sky)">clickable.</span></li>
                 <li><span style="background:var(--yellow)">readable.</span></li>
                 <li><span style="background:var(--violet)">usable.</span></li>
-                <li><span style="background:var(--emerald)">watchable.</span></li>
+                <li><span style="background:var(--green)">watchable.</span></li>
               </ul>
             </span>
           </h1>
-          <p class="lead">The Artists is a premium agency for video editing, graphic design, web development, content writing and app development. One team, one brief, everything your brand needs.</p>
+          <p class="lead">The Artists is an agency for video editing, graphic design, web development, content writing and app development. One team, one brief, everything your brand needs.</p>
           <div class="cta-row">
             <a class="btn primary" href="#book" data-book="">Book a call</a>
             <a class="btn" href="#services">Explore services</a>
           </div>
-          <div class="hero-stats">
-            <div><b data-count="50" data-suffix="+">0+</b><span>Projects</span></div>
-            <div><b data-count="20" data-suffix="+">0+</b><span>Clients</span></div>
-            <div><b data-count="5">0</b><span>Services</span></div>
-            <div><b data-count="24" data-suffix="h">0h</b><span>Reply time</span></div>
-          </div>
         </div>
 
-        <!-- Tech showcase -->
-        <div class="hero-showcase rv" aria-hidden="true">
-          <div class="hs-terminal">
-            <div class="hs-bar">
-              <i></i><i></i><i></i>
-              <span class="mono">the-artists ~ live</span>
-            </div>
-            <div class="hs-body">
-              <div class="hs-line"><span class="hs-prompt">$</span> <span class="hs-cmd">the-artists new --project</span></div>
-              <div class="hs-out">→ brief received <span class="hs-ok">✓</span></div>
-              <div class="hs-line"><span class="hs-prompt">$</span> <span class="hs-cmd">team --assign</span></div>
-              <div class="hs-out"><span class="hs-ok">✓</span> 5 specialists matched</div>
-              <div class="hs-out"><span class="hs-ok">✓</span> first draft in 72h</div>
-              <div class="hs-line"><span class="hs-prompt">$</span> <span class="hs-cursor"></span></div>
-            </div>
-          </div>
-          <div class="hs-stats">
-            <div class="hs-stat"><b>4.9<span>★</span></b><span>Rating</span></div>
-            <div class="hs-stat"><b>100<span>%</span></b><span>On-time</span></div>
-            <div class="hs-stat"><b>24<span>h</span></b><span>Reply</span></div>
-          </div>
-        </div>
+        <figure class="char r" id="fig-talha" style="--a:var(--magenta)">
+          <canvas id="cv-talha" role="img" aria-label="Animated 3D character of Talha Rauf, Founder"></canvas>
+          <div class="avatar-fb" aria-hidden="true">TR</div>
+          <figcaption class="plate"><b>Talha Rauf</b><span class="mono">Founder</span></figcaption>
+        </figure>
       </div>
 
       <div class="marq" aria-hidden="true"><div class="marq-track" id="marq"></div></div>
 
-      <!-- Trust strip -->
-      <section class="trust-strip rv" aria-label="Trusted by">
-        <p class="mono">Trusted by teams at</p>
-        <div class="trust-logos">
-          <span>NEXUS</span><span>VERTEX</span><span>LUMEN</span>
-          <span>PULSE</span><span>ORBIT</span><span>FLOW</span>
-        </div>
-      </section>
-
-      <!-- SERVICES -->
       <section id="services" aria-labelledby="services-h">
         <div class="sec-head rv">
           <div class="eyebrow mono">What we do</div>
@@ -358,46 +87,6 @@
         <div class="svcs" id="svcs"></div>
       </section>
 
-      <!-- Stats band -->
-      <section class="stats-band rv" aria-label="Numbers">
-        <div class="stat-item"><b data-count="50" data-suffix="+">0+</b><span>Projects delivered</span></div>
-        <div class="stat-item"><b data-count="20" data-suffix="+">0+</b><span>Happy clients</span></div>
-        <div class="stat-item"><b data-count="100" data-suffix="%">0%</b><span>On-time delivery</span></div>
-        <div class="stat-item"><b data-count="12" data-suffix="+">0+</b><span>Industries served</span></div>
-      </section>
-
-      <!-- FOUNDERS -->
-      <section id="founders" aria-labelledby="founders-h">
-        <div class="sec-head rv">
-          <div class="eyebrow mono">The Team</div>
-          <h2 id="founders-h">The minds behind the agency</h2>
-          <p>Two founders, one vision — building brands that stand out and systems that work.</p>
-        </div>
-        <div class="founders-duo">
-          <article class="founder-card founder-l rv">
-            <div class="fc-media">
-              <img src="uzair-founder.png" alt="Uzair Ehsan, Founder" loading="lazy">
-            </div>
-            <div class="fc-info">
-              <div class="fc-head"><h3>Uzair Ehsan</h3><span class="mono fc-role">Founder</span></div>
-              <p>Driving the creative and technical vision behind our most complex digital products. Passionate about building things that work beautifully.</p>
-              <div class="fc-socials"><a href="#" target="_blank" rel="noopener">LinkedIn →</a></div>
-            </div>
-          </article>
-          <article class="founder-card founder-r rv" style="--d:120ms">
-            <div class="fc-media">
-              <img src="talha-founder.png" alt="Talha Rauf, Founder" loading="lazy">
-            </div>
-            <div class="fc-info">
-              <div class="fc-head"><h3>Talha Rauf</h3><span class="mono fc-role">Founder</span></div>
-              <p>Leading strategy, client success, and project delivery. Focused on turning raw ideas into scalable, market-ready brand experiences.</p>
-              <div class="fc-socials"><a href="#" target="_blank" rel="noopener">LinkedIn →</a></div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- PROCESS -->
       <section id="process" aria-labelledby="process-h">
         <div class="sec-head rv">
           <div class="eyebrow mono">How a project runs</div>
@@ -405,52 +94,12 @@
         </div>
         <div class="steps">
           <div class="step rv" style="--c:var(--green);--d:0ms"><span class="n">1</span><h3>Brief</h3><p>Tell us what you need, who it is for and where it will be used.</p></div>
-          <div class="step rv" style="--c:var(--yellow);--d:80ms"><span class="n">2</span><h3>First draft</h3><p>We share a plan, a timeline and a first version to react to.</p></div>
+          <div class="step rv" style="--c:var(--yellow);--d:80ms"><span class="n">2</span><h3>First draft</h3><p>We share a plan, a timeline and a first version or concept to react to.</p></div>
           <div class="step rv" style="--c:var(--sky);--d:160ms"><span class="n">3</span><h3>Revisions</h3><p>You send notes and we refine the work until it feels right.</p></div>
           <div class="step rv" style="--c:var(--magenta);--d:240ms"><span class="n">4</span><h3>Delivery</h3><p>Final files, source files and a clear handover, ready to use.</p></div>
         </div>
       </section>
 
-      <!-- TESTIMONIALS -->
-      <section id="testimonials" aria-labelledby="testi-h">
-        <div class="sec-head rv">
-          <div class="eyebrow mono">Testimonials</div>
-          <h2 id="testi-h">What clients say</h2>
-          <p>Real words from real projects — no filler.</p>
-        </div>
-        <div class="testi-grid">
-          <blockquote class="testi rv">
-            <p>"The Artists delivered a brand video that stopped people mid-scroll. Clean, on-time, and way beyond what we expected."</p>
-            <footer><b>Sarah Khan</b><span>Marketing Director · Nexus</span></footer>
-          </blockquote>
-          <blockquote class="testi rv" style="--d:80ms">
-            <p>"Our new website loads fast, looks premium, and bookings doubled in the first month. Zero complaints."</p>
-            <footer><b>Ahmed Ali</b><span>Founder · Vertex Studio</span></footer>
-          </blockquote>
-          <blockquote class="testi rv" style="--d:160ms">
-            <p>"The brand identity they built is exactly what we needed — modern, versatile, and impossible to ignore."</p>
-            <footer><b>Fatima Sheikh</b><span>CEO · Lumen Co.</span></footer>
-          </blockquote>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section id="faq" aria-labelledby="faq-h">
-        <div class="sec-head rv">
-          <div class="eyebrow mono">FAQ</div>
-          <h2 id="faq-h">Questions, answered</h2>
-        </div>
-        <div class="faq-list">
-          <details class="faq-item rv"><summary>How long does a project take?</summary><p>Most projects complete in 3–14 days depending on scope. Larger builds get a clear timeline upfront before we start.</p></details>
-          <details class="faq-item rv" style="--d:40ms"><summary>What does a project cost?</summary><p>Pricing depends on scope. Small tasks start around a few hundred dollars, full builds are quoted after a short discovery call. No hidden fees.</p></details>
-          <details class="faq-item rv" style="--d:80ms"><summary>Do you offer revisions?</summary><p>Yes. Every project includes revision rounds. We keep refining until the work feels right for your brand.</p></details>
-          <details class="faq-item rv" style="--d:120ms"><summary>What files will I receive?</summary><p>You get final exports plus source files where applicable — so you own everything and can reuse it forever.</p></details>
-          <details class="faq-item rv" style="--d:160ms"><summary>Do you work with international clients?</summary><p>Yes, we work with clients across time zones. Calls are scheduled in your time zone and async updates keep everything moving.</p></details>
-          <details class="faq-item rv" style="--d:200ms"><summary>How do we start?</summary><p>Book a discovery call or send a brief through the form below. We reply within 24 hours with next steps.</p></details>
-        </div>
-      </section>
-
-      <!-- BOOKING -->
       <section id="book" aria-labelledby="book-h">
         <div class="book">
           <div class="book-info rv">
@@ -474,15 +123,15 @@
   </main>
 
   <footer>
-    <div class="f-brand">
-      <a class="brand" href="#home"><img src="the-artists-logo.png" alt="The Artists Logo" class="footer-logo"></a>
-      <p style="margin-top:16px">© 2026 The Artists. All rights reserved.</p>
+    <div>
+      <a class="brand" href="#home"><span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>The Artists</a>
+      <p style="margin-top:10px">© 2026 The Artists</p>
     </div>
     <div class="flinks" id="flinks"></div>
   </footer>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="js/main.js"></script>
 </body>
->>>>>>> 4c1e8a0b88cd7ea8aeb6d3e6f66f45ff6da1d91a
 </html>

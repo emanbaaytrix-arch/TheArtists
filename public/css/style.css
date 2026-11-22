@@ -91,6 +91,8 @@ h1, h2, h3, p { margin: 0; }
 .sm4 { width: 400px; height: 400px; right: 20%; top: -100px; background: var(--teal); opacity: 0.1; animation: sm2 32s ease-in-out infinite alternate-reverse; }
 .sm5 { width: 350px; height: 350px; left: 10%; top: 500px; background: var(--emerald); opacity: 0.15; animation: sm1 28s ease-in-out infinite alternate-reverse; }
 .sm6 { width: 450px; height: 400px; right: -50px; top: 600px; background: var(--neon); opacity: 0.1; animation: sm3 40s ease-in-out infinite alternate-reverse; }
+.sm7 { width: 380px; height: 380px; left: 45%; top: 700px; background: var(--teal); opacity: 0.12; animation: sm2 34s ease-in-out infinite alternate; }
+.sm8 { width: 500px; height: 420px; right: 25%; top: 850px; background: var(--emerald); opacity: 0.1; animation: sm1 38s ease-in-out infinite alternate-reverse; }
 
 /* HEADER */
 .top {
