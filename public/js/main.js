@@ -109,7 +109,6 @@
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function byId(id) { for (var i = 0; i < SERVICES.length; i++) if (SERVICES[i].id === id) return SERVICES[i]; return null; }
 
-  /* ---------- Scroll progress ---------- */
   var progressEl = $('#progress');
   function updateProgress() {
     var h = document.documentElement;
@@ -121,7 +120,6 @@
   window.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('resize', updateProgress, { passive: true });
 
-  /* ---------- Counter animation ---------- */
   function animateCounter(el) {
     if (el.dataset.counted) return;
     el.dataset.counted = '1';
@@ -139,7 +137,6 @@
     requestAnimationFrame(tick);
   }
 
-  /* ---------- Reveal on scroll ---------- */
   var io = ('IntersectionObserver' in window) ? new IntersectionObserver(function (es) {
     es.forEach(function (e) {
       if (e.isIntersecting) {
@@ -156,12 +153,10 @@
     $$('.rv:not(.in)', root).forEach(function (n) { if (io) io.observe(n); else n.classList.add('in'); });
   }
 
-  /* ---------- Contact info ---------- */
   if ($('#c-mail')) $('#c-mail').textContent = CFG.email;
   if ($('#c-wa')) $('#c-wa').textContent = CFG.whatsapp;
   if ($('#c-hours')) $('#c-hours').textContent = CFG.hours;
 
-  /* ---------- Home rendering ---------- */
   if ($('#svcs')) {
     $('#svcs').innerHTML = SERVICES.map(function (s, i) {
       return '<a class="svc rv" href="#' + s.id + '" style="--a:var(--' + s.c + ');--d:' + (i * 70) + 'ms">' +
@@ -176,7 +171,6 @@
   if ($('#marq')) $('#marq').innerHTML = '<span class="marq-item">' + mq + '</span><span class="marq-item">' + mq + '</span>';
   if ($('#flinks')) $('#flinks').innerHTML = SERVICES.map(function (s) { return '<a href="#' + s.id + '">' + esc(s.name) + '</a>'; }).join('');
 
-  /* ---------- Cursor spotlight on hero ---------- */
   var heroEl = $('.hero3');
   if (heroEl && !reduce && window.matchMedia('(pointer:fine)').matches) {
     var spot = document.createElement('div');
@@ -193,7 +187,6 @@
     });
   }
 
-  /* ---------- Service Page Rendering ---------- */
   function thumb(s, w, i) {
     var b = BS[(i + 2) % BS.length], k = s.kind, inner = '';
     var imgUrl = w[3] || null;
@@ -211,7 +204,6 @@
     return '<div class="wthumb k-' + k + ' v' + (i % 3) + '" style="' + bgStyle + '">' + inner +
       '<span class="chip s">Sample</span><span class="chip k">' + esc(w[1]) + '</span><span class="chip d">' + esc(w[2]) + '</span></div>';
   }
-
   function workCard(s, w, i) {
     var videoUrl = w[4] || null;
     var cta;
@@ -225,7 +217,6 @@
     return '<article class="work rv" style="--d:' + ((i % 4) * 70) + 'ms">' + thumb(s, w, i) +
       '<div class="wbody"><h3>' + esc(w[0]) + '</h3>' + cta + '</div></article>';
   }
-
   function renderService(s) {
     var i = SERVICES.indexOf(s), n = SERVICES.length;
     var prev = SERVICES[(i + n - 1) % n], next = SERVICES[(i + 1) % n];
@@ -245,7 +236,6 @@
     observe(v);
   }
 
-  /* ---------- Booking Logic ---------- */
   var BK = { service: 'video-editing', type: 'call20', day: '', time: '', step: 1 };
   var TYPES = [['call20', 'Discovery call', '20 minutes'], ['call45', 'Project consultation', '45 minutes'], ['brief', 'Send a brief', 'No call needed']];
   function days() {
@@ -390,7 +380,6 @@
     }
   });
 
-  /* ---------- Router ---------- */
   var lastView = '';
   function show(id) {
     ['v-home', 'v-service', 'v-inbox'].forEach(function (v) { var el = $('#' + v); if (el) el.hidden = (v !== id); });

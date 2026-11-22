@@ -1,15 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>The Artists — Creative & Tech Agency</title>
-<meta name="theme-color" content="#020B08">
-<meta name="description" content="The Artists is a creative & tech agency for video editing, graphic design, web development, content writing and app development. One team, one brief.">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Figtree:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,16 +22,14 @@
   <i class="sm sm4"></i>
   <i class="sm sm5"></i>
   <i class="sm sm6"></i>
+  <i class="sm sm7"></i>
+  <i class="sm sm8"></i>
 </div>
 
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="#home" aria-label="The Artists — Home">
-      <div class="brand-title">
-        <b>The Artists</b>
-        <small>Creative &amp; Tech</small>
-      </div>
-      <span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <a class="brand" href="#home">
+      <span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>The Artists
     </a>
     <nav aria-label="Main">
       <a class="l" href="#services">Services</a>
@@ -45,19 +41,11 @@
 
   <main>
     <div class="view" id="v-home">
-
-      <!-- ============ HERO — 3 columns: Founder L / Copy / Founder R ============ -->
-      <section class="hero3" aria-label="Introduction">
-        <figure class="char l rv" id="fig-uzair" style="--a:var(--sky)">
-          <div class="char-media">
-            <img src="images/founders/uzair.jpg" alt="Uzair Ehsan — Co-Founder of The Artists" loading="eager"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-            <div class="avatar-fb" aria-hidden="true">UE</div>
-          </div>
-          <figcaption class="plate">
-            <b>Uzair Ehsan</b>
-            <span class="mono">Co-Founder</span>
-          </figcaption>
+      <div class="hero3">
+        <figure class="char l" id="fig-uzair" style="--a:var(--sky)">
+          <canvas id="cv-uzair" role="img" aria-label="Animated 3D character of Uzair Ehsan, Co-Founder"></canvas>
+          <div class="avatar-fb" aria-hidden="true">UE</div>
+          <figcaption class="plate"><b>Uzair Ehsan</b><span class="mono">Co-Founder</span></figcaption>
         </figure>
 
         <div class="hero-copy">
@@ -81,22 +69,15 @@
           </div>
         </div>
 
-        <figure class="char r rv" id="fig-talha" style="--a:var(--magenta)">
-          <div class="char-media">
-            <img src="images/founders/talha.jpg" alt="Talha Rauf — Founder of The Artists" loading="eager"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-            <div class="avatar-fb" aria-hidden="true">TR</div>
-          </div>
-          <figcaption class="plate">
-            <b>Talha Rauf</b>
-            <span class="mono">Founder</span>
-          </figcaption>
+        <figure class="char r" id="fig-talha" style="--a:var(--magenta)">
+          <canvas id="cv-talha" role="img" aria-label="Animated 3D character of Talha Rauf, Founder"></canvas>
+          <div class="avatar-fb" aria-hidden="true">TR</div>
+          <figcaption class="plate"><b>Talha Rauf</b><span class="mono">Founder</span></figcaption>
         </figure>
-      </section>
+      </div>
 
       <div class="marq" aria-hidden="true"><div class="marq-track" id="marq"></div></div>
 
-      <!-- ============ SERVICES ============ -->
       <section id="services" aria-labelledby="services-h">
         <div class="sec-head rv">
           <div class="eyebrow mono">What we do</div>
@@ -106,7 +87,7 @@
         <div class="svcs" id="svcs"></div>
       </section>
 
-      <!-- ============ MINDS BEHIND THE AGENCY ============ -->
+      <!-- NEW SECTION: MINDS BEHIND THE AGENCY (optional — delete if you don't want it) -->
       <section id="founders" aria-labelledby="founders-h">
         <div class="sec-head rv">
           <div class="eyebrow mono"><i></i>Minds behind the agency</div>
@@ -150,7 +131,6 @@
         </div>
       </section>
 
-      <!-- ============ PROCESS ============ -->
       <section id="process" aria-labelledby="process-h">
         <div class="sec-head rv">
           <div class="eyebrow mono">How a project runs</div>
@@ -159,12 +139,11 @@
         <div class="steps">
           <div class="step rv" style="--c:var(--green);--d:0ms"><span class="n">1</span><h3>Brief</h3><p>Tell us what you need, who it is for and where it will be used.</p></div>
           <div class="step rv" style="--c:var(--yellow);--d:80ms"><span class="n">2</span><h3>First draft</h3><p>We share a plan, a timeline and a first version or concept to react to.</p></div>
-          <div class="step rv" style="--c:var(--magenta);--d:160ms"><span class="n">3</span><h3>Revisions</h3><p>You send notes and we refine the work until it feels right.</p></div>
-          <div class="step rv" style="--c:var(--sky);--d:240ms"><span class="n">4</span><h3>Delivery</h3><p>Final files, source files and a clear handover, ready to use.</p></div>
+          <div class="step rv" style="--c:var(--sky);--d:160ms"><span class="n">3</span><h3>Revisions</h3><p>You send notes and we refine the work until it feels right.</p></div>
+          <div class="step rv" style="--c:var(--magenta);--d:240ms"><span class="n">4</span><h3>Delivery</h3><p>Final files, source files and a clear handover, ready to use.</p></div>
         </div>
       </section>
 
-      <!-- ============ BOOK ============ -->
       <section id="book" aria-labelledby="book-h">
         <div class="book">
           <div class="book-info rv">
@@ -189,19 +168,14 @@
 
   <footer>
     <div>
-      <a class="brand" href="#home" aria-label="The Artists — Home">
-        <div class="brand-title">
-          <b>The Artists</b>
-          <small>Creative &amp; Tech</small>
-        </div>
-        <span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      </a>
-      <p style="margin-top:12px">© 2026 The Artists</p>
+      <a class="brand" href="#home"><span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>The Artists</a>
+      <p style="margin-top:10px">© 2026 The Artists</p>
     </div>
     <div class="flinks" id="flinks"></div>
   </footer>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
