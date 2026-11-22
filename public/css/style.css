@@ -490,6 +490,13 @@ footer a { text-decoration: none; transition: color 0.2s; }
 footer a:hover { color: var(--emerald); }
 .flinks { display: flex; flex-wrap: wrap; gap: 6px 18px; }
 
+.footer-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(0, 200, 120, 0.4));
+}
+
 /* SERVICE PAGES */
 .back { display: inline-flex; gap: 8px; align-items: center; text-decoration: none; margin-top: 28px; padding: 8px 14px 8px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); font-weight: 600; font-size: 0.9rem; transition: border-color 0.3s; }
 .back:hover { border-color: var(--a); }
