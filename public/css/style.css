@@ -140,6 +140,9 @@ h1, h2, h3, p { margin: 0; }
 .brand:hover .logo i { transform: scaleY(1.15); }
 @keyframes logoSway { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(1.12); } }
 
+/* Logo Sizes */
+.nav-logo { height: 48px; width: auto; object-fit: contain; filter: drop-shadow(0 0 10px rgba(0, 200, 120, 0.4)); }
+.hero-logo { height: 88px; width: auto; object-fit: contain; margin-bottom: 22px; filter: drop-shadow(0 0 20px rgba(0, 200, 120, 0.5)); animation: floatLogo 6s ease-in-out infinite; }
 nav { display: flex; align-items: center; gap: 4px; }
 nav a.l { font-size: 0.95rem; font-weight: 500; text-decoration: none; padding: 8px 14px; border-radius: 999px; transition: background 0.2s, color 0.2s; }
 nav a.l:hover { background: var(--panel2); color: var(--emerald); }
